@@ -1,0 +1,113 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Premium HVAC Repair & Installation | Comffordable Air Solutions" description="Comffordable Air Solutions provides expert AC repair, furnace maintenance, and HVAC installation in St. Petersburg, Tampa, and Clearwater, FL.">
+    <main>
+        <!-- A: Anchor (Hero Section) -->
+        <section class="hero" id="home">
+            <img src="/images/service 1.png" alt="AC unit installation by Comffordable Air Solutions" class="hero-bg-img" loading="eager" width="1920" height="1080" />
+            <div class="hero-overlay" style="background: linear-gradient(to bottom, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.9));"></div>
+            <div class="container hero-content">
+                <h1>Comfort You Can <span class="text-purple">Afford.</span></h1>
+                <p>Expert HVAC repair, installation, and maintenance across the Tampa Bay Area. We specialize in keeping your home perfectly tempered with quality service in 
+                    <a href="/service-areas/st-petersburg-fl" class="text-purple" style="text-decoration: underline;">St. Petersburg</a>, 
+                    <a href="/service-areas/tampa-fl" class="text-purple" style="text-decoration: underline;">Tampa</a>, and 
+                    <a href="/service-areas/clearwater-fl" class="text-purple" style="text-decoration: underline;">Clearwater</a>.</p>
+                <div class="hero-buttons">
+                    <a href="tel:+17276771700" class="btn btn-primary"><i class="fa-solid fa-phone"></i> (727) 677-1700</a>
+                    <a href="#services" class="btn btn-primary" style="position: relative;">Explore Services</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- G: Guide (Process Section) -->
+        <section class="process-section">
+            <div class="container">
+                <div class="section-title animate-on-scroll">
+                    <span>How It Works</span>
+                    <h2>The Comffordable Process</h2>
+                </div>
+                <div class="process-grid">
+                    <div class="process-step animate-on-scroll">
+                        <div class="step-number">1</div>
+                        <h3>Book Your Service</h3>
+                        <p>Give us a call to discuss your HVAC system's specific needs and set up a consistent maintenance schedule.</p>
+                    </div>
+                    <div class="process-step animate-on-scroll" style="transition-delay: 0.2s">
+                        <div class="step-number">2</div>
+                        <h3>We Handle The Work</h3>
+                        <p>Our experienced technicians provide quality, service-driven solutions with extreme attention to detail.</p>
+                    </div>
+                    <div class="process-step animate-on-scroll" style="transition-delay: 0.4s">
+                        <div class="step-number">3</div>
+                        <h3>Expert Solutions</h3>
+                        <p>Comfort you can afford shouldn't mean cutting corners. Our specialists prioritize quality and transparency. </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- G: Guide (Core Services) -->
+        <section id="services">
+            <div class="container">
+                <div class="section-title animate-on-scroll">
+                    <span>Our Expertise</span>
+                    <h2>Premium HVAC Services</h2>
+                </div>
+
+                <div class="services-grid">
+                    <!-- Service 1 -->
+                    <div class="glass-panel service-card animate-on-scroll">
+                        <i class="fa-solid fa-snowflake service-icon"></i>
+                        <h3>AC Repair & Install</h3>
+                        <p>Emergency repairs and high-efficiency installations to keep you cool during the Florida heat.
+                        </p>
+                        <span class="service-price">Custom Quotes</span>
+                        <a href="/ac-repair" class="btn btn-outline"
+                            style="margin-top: 1.5rem; width: 100%; text-align: center;">View details</a>
+                    </div>
+
+                    <!-- Service 2 -->
+                    <div class="glass-panel service-card animate-on-scroll" style="transition-delay: 0.2s">
+                        <i class="fa-solid fa-fire service-icon"></i>
+                        <h3>Heating & Furnaces</h3>
+                        <p>Specialized service for heating systems and furnaces to ensure your home stays warm during the chilly bay area nights.
+                        </p>
+                        <span class="service-price">Call for Pricing</span>
+                        <a href="/heating" class="btn btn-outline"
+                            style="margin-top: 1.5rem; width: 100%; text-align: center;">Learn More</a>
+                    </div>
+
+                    <!-- Service 3 -->
+                    <div class="glass-panel service-card animate-on-scroll" style="transition-delay: 0.4s">
+                        <i class="fa-solid fa-screwdriver-wrench service-icon"></i>
+                        <h3>Preventative Care</h3>
+                        <p>Proactive maintenance plans to extend the life of your HVAC system and prevent unexpected breakdowns.</p>
+                        <span class="service-price">Starting at $99</span>
+                        <a href="/maintenance" class="btn btn-outline"
+                            style="margin-top: 1.5rem; width: 100%; text-align: center;">Get a Quote</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+
+        <!-- CTA Section -->
+        <section
+            style="background: linear-gradient(135deg, var(--bg-dark), var(--bg-darker)); text-align: center; border-top: 1px solid var(--glass-border); border-bottom: 1px solid var(--glass-border);">
+            <div class="container animate-on-scroll">
+                <h2 style="margin-bottom: 1rem;">Ready for Comffordable Comfort?</h2>
+                <p
+                    style="margin-bottom: 1rem; font-size: 1.1rem; max-width: 600px; margin-left: auto; margin-right: auto;">
+                    Unhappy with your current service? It's time for consistency, communication, and quality.</p>
+                <p style="margin-bottom: 2rem; font-size: 1rem; font-style: italic; color: var(--text-secondary); max-width: 600px; margin-left: auto; margin-right: auto;">
+                    Professional HVAC repair and air quality solutions for St. Petersburg, Tampa, and Clearwater.
+                </p>
+                <a href="/contact" class="btn btn-primary" style="font-size: 1.1rem; padding: 1rem 2rem;">Get Your
+                    Free Quote</a>
+            </div>
+        </section>
+    </main>
+</Layout>
