@@ -6,20 +6,29 @@ import Layout from '../layouts/Layout.astro';
     <main>
         <!-- A: Anchor (Hero Section) -->
         <section class="hero" id="home">
-            <img src="/images/service 1.png" alt="AC unit installation by Comffordable Air Solutions" class="hero-bg-img" loading="eager" width="1920" height="1080" />
+            <img src="/images/pic_5.jpg" alt="Comffordable Air Solutions HVAC work in Tampa Bay, FL" class="hero-bg-img" loading="eager" width="1920" height="1080" />
             <div class="hero-overlay" style="background: linear-gradient(to bottom, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.9));"></div>
             <div class="container hero-content">
-                <h1>Comfort You Can <span class="text-purple">Afford.</span></h1>
+                <h1>AC Repair &amp; HVAC Services in <span class="text-purple">Tampa Bay, FL</span></h1>
                 <p>Expert HVAC repair, installation, and maintenance across the Tampa Bay Area. We specialize in keeping your home perfectly tempered with quality service in 
                     <a href="/service-areas/st-petersburg-fl" class="text-purple" style="text-decoration: underline;">St. Petersburg</a>, 
                     <a href="/service-areas/tampa-fl" class="text-purple" style="text-decoration: underline;">Tampa</a>, and 
                     <a href="/service-areas/clearwater-fl" class="text-purple" style="text-decoration: underline;">Clearwater</a>.</p>
                 <div class="hero-buttons">
                     <a href="tel:+17276771700" class="btn btn-primary"><i class="fa-solid fa-phone"></i> (727) 677-1700</a>
-                    <a href="#services" class="btn btn-primary" style="position: relative;">Explore Services</a>
+                    <a href="/contact" class="btn btn-primary" style="position: relative; background: #d32f2f; box-shadow: 0 4px 15px rgba(211,47,47,0.5);"><i class="fa-solid fa-triangle-exclamation"></i> 24/7 Emergency Service</a>
                 </div>
             </div>
         </section>
+
+        <!-- Reviews Widget Section -->
+        <section style="background: var(--bg-darker); padding: 3rem 0 1.5rem; border-bottom: 1px solid var(--glass-border);">
+            <div class="container">
+                <script type='text/javascript' src='https://links.comairfl.com/reputation/assets/review-widget.js'></script>
+                <iframe class='lc_reviews_widget' src='https://links.comairfl.com/reputation/widgets/review_widget/jd6pyXtJMDm0jnfx7iMr' frameborder='0' scrolling='no' style='min-width: 100%; width: 100%; min-height: 250px;'></iframe>
+            </div>
+        </section>
+
 
         <!-- G: Guide (Process Section) -->
         <section class="process-section">
@@ -31,18 +40,18 @@ import Layout from '../layouts/Layout.astro';
                 <div class="process-grid">
                     <div class="process-step animate-on-scroll">
                         <div class="step-number">1</div>
-                        <h3>Book Your Service</h3>
+                        <h3>Book Service</h3>
                         <p>Give us a call to discuss your HVAC system's specific needs and set up a consistent maintenance schedule.</p>
                     </div>
                     <div class="process-step animate-on-scroll" style="transition-delay: 0.2s">
                         <div class="step-number">2</div>
-                        <h3>We Handle The Work</h3>
-                        <p>Our experienced technicians provide quality, service-driven solutions with extreme attention to detail.</p>
+                        <h3>Expert Solutions</h3>
+                        <p>Comfort you can afford shouldn't mean cutting corners. Our specialists prioritize quality and transparency.</p>
                     </div>
                     <div class="process-step animate-on-scroll" style="transition-delay: 0.4s">
                         <div class="step-number">3</div>
-                        <h3>Expert Solutions</h3>
-                        <p>Comfort you can afford shouldn't mean cutting corners. Our specialists prioritize quality and transparency. </p>
+                        <h3>We Handle the Work</h3>
+                        <p>Our experienced technicians provide quality, service-driven solutions with extreme attention to detail.</p>
                     </div>
                 </div>
             </div>
@@ -70,12 +79,11 @@ import Layout from '../layouts/Layout.astro';
 
                     <!-- Service 2 -->
                     <div class="glass-panel service-card animate-on-scroll" style="transition-delay: 0.2s">
-                        <i class="fa-solid fa-fire service-icon"></i>
-                        <h3>Heating & Furnaces</h3>
-                        <p>Specialized service for heating systems and furnaces to ensure your home stays warm during the chilly bay area nights.
-                        </p>
-                        <span class="service-price">Call for Pricing</span>
-                        <a href="/heating" class="btn btn-outline"
+                        <i class="fa-solid fa-wind service-icon"></i>
+                        <h3>Indoor Air Quality (IAQ)</h3>
+                        <p>Florida's heat and humidity create the perfect breeding ground for mold, allergens, and airborne pollutants inside your home. Our IAQ solutions, including HEPA filtration, UV-C air scrubbers, and whole-home dehumidification, target the microscopic threats standard filters miss. Breathe cleaner air and protect your family from dust mites, bacteria, and VOCs circulating through your ductwork.</p>
+                        <span class="service-price">Custom Quotes</span>
+                        <a href="/iaq" class="btn btn-outline"
                             style="margin-top: 1.5rem; width: 100%; text-align: center;">Learn More</a>
                     </div>
 
@@ -83,7 +91,7 @@ import Layout from '../layouts/Layout.astro';
                     <div class="glass-panel service-card animate-on-scroll" style="transition-delay: 0.4s">
                         <i class="fa-solid fa-screwdriver-wrench service-icon"></i>
                         <h3>Preventative Care</h3>
-                        <p>Proactive maintenance plans to extend the life of your HVAC system and prevent unexpected breakdowns.</p>
+                        <p>Florida AC systems run 10+ months a year, twice the wear of northern climates. <a href="/maintenance" class="text-purple" style="font-weight:600;">Proactive care</a> catches drain clogs, coil corrosion, and refrigerant loss before they become emergencies. Our maintenance plans extend system life and keep energy bills low.</p>
                         <span class="service-price">Starting at $99</span>
                         <a href="/maintenance" class="btn btn-outline"
                             style="margin-top: 1.5rem; width: 100%; text-align: center;">Get a Quote</a>

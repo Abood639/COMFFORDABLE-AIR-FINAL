@@ -317,6 +317,20 @@ section {
   font-size: 0.9rem;
 }
 
+/* Specialized services grid - mobile safe */
+.specialized-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  align-items: start;
+}
+
+@media (max-width: 900px) {
+  .specialized-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
 /* Process Section */
 .process-section {
   background-color: var(--bg-dark);
@@ -345,7 +359,7 @@ section {
   font-size: 1.5rem;
   font-weight: bold;
   margin: 0 auto 1.5rem auto;
-  box-shadow: 0 0 20px rgba(139, 47, 141, 0.5);
+  box-shadow: 0 0 20px rgba(97, 168, 47, 0.7);
 }
 
 /* Footer */

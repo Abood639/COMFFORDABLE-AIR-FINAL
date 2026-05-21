@@ -1,7 +1,7 @@
 {
     "name": "Comffordable Air Solutions",
     "phone": "(727) 677-1700",
-    "email": "service@comffordableairsolutions.com",
+    "email": "info@comairfl.com",
     "industry": "HVAC",
     "location": {
         "street": "Tampa Bay Area",
@@ -54,6 +54,9 @@
         }
     ],
     "socials": {
-        "yelp": "https://www.yelp.com/biz/comffordable-air-solutions-st-petersburg?utm_campaign=www_business_share_popup&utm_medium=copy_link&utm_source=(direct)"
+        "yelp": "https://www.yelp.com/biz/comffordable-air-solutions-st-petersburg",
+        "instagram": "https://www.instagram.com/comffordable_air/",
+        "facebook": "https://www.facebook.com/profile.php?id=61577480190749",
+        "nextdoor": "https://nextdoor.com/pages/comffordable-air-solutions/"
     }
 }

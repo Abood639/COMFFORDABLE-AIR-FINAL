@@ -15,30 +15,69 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 // LocalBusiness SAB Schema Generator
 const schemaBase = {
   "@context": "https://schema.org",
-  "@type": "HVACBusiness",
+  "@type": ["HVACBusiness", "LocalBusiness"],
   "name": businessData.name,
   "image": "https://comffordableairsolutions.com/images/logo.png",
   "@id": "https://comffordableairsolutions.com",
   "url": "https://comffordableairsolutions.com/",
   "telephone": businessData.phone,
   "email": businessData.email,
+  "license": "CAC1823516",
+  "identifier": {
+    "@type": "PropertyValue",
+    "name": "Florida HVAC License",
+    "value": "CAC1823516"
+  },
   "address": {
     "@type": "PostalAddress",
-    "addressLocality": businessData.location.city,
-    "addressRegion": businessData.location.state,
-    "addressCountry": businessData.location.country
+    "addressLocality": "Riverview",
+    "addressRegion": "FL",
+    "postalCode": "33578",
+    "addressCountry": "US"
   },
-  "areaServed": businessData.serviceAreas.map(area => ({
-    "@type": "City",
-    "name": area.name,
-    "sameAs": area.wiki
-  })),
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 27.8661,
+    "longitude": -82.3288
+  },
+  "areaServed": [
+    { "@type": "City", "name": "Tampa", "sameAs": "https://en.wikipedia.org/wiki/Tampa,_Florida" },
+    { "@type": "City", "name": "St. Petersburg", "sameAs": "https://en.wikipedia.org/wiki/St._Petersburg,_Florida" },
+    { "@type": "City", "name": "Clearwater", "sameAs": "https://en.wikipedia.org/wiki/Clearwater,_Florida" },
+    { "@type": "City", "name": "Riverview", "sameAs": "https://en.wikipedia.org/wiki/Riverview,_Florida" },
+    { "@type": "City", "name": "Brandon", "sameAs": "https://en.wikipedia.org/wiki/Brandon,_Florida" },
+    { "@type": "City", "name": "Largo", "sameAs": "https://en.wikipedia.org/wiki/Largo,_Florida" },
+    { "@type": "City", "name": "Bradenton", "sameAs": "https://en.wikipedia.org/wiki/Bradenton,_Florida" },
+    { "@type": "City", "name": "Sarasota", "sameAs": "https://en.wikipedia.org/wiki/Sarasota,_Florida" },
+    { "@type": "City", "name": "Seminole" },
+    { "@type": "City", "name": "Dunedin" },
+    { "@type": "City", "name": "Palm Harbor" },
+    { "@type": "City", "name": "Wesley Chapel" },
+    { "@type": "City", "name": "New Port Richey" }
+  ],
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "HVAC Services",
+    "itemListElement": [
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "AC Repair", "description": "Emergency and scheduled air conditioning repair for Tampa Bay homes" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "AC Installation", "description": "High-efficiency SEER2 air conditioning system installation" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Indoor Air Quality", "description": "HEPA filtration, UV-C air scrubbers, and whole-home dehumidification" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "HVAC Maintenance", "description": "Preventative maintenance plans to extend system life and prevent breakdowns" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Emergency HVAC Service", "description": "24/7 emergency air conditioning repair in the Tampa Bay Area" } }
+    ]
+  },
+  "sameAs": [
+    businessData.socials.facebook,
+    businessData.socials.instagram,
+    businessData.socials.yelp,
+    businessData.socials.nextdoor
+  ],
   "openingHoursSpecification": [
     {
       "@type": "OpeningHoursSpecification",
       "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
-      "opens": "00:00",
-      "closes": "23:59"
+      "opens": "08:00",
+      "closes": "18:00"
     }
   ],
   "aggregateRating": {
@@ -72,7 +111,8 @@ const schemaBase = {
 		<link rel="preconnect" href="https://fonts.googleapis.com">
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 		<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+		<link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+		<noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"></noscript>
 		
 		<script type="application/ld+json" set:html={JSON.stringify(schemaBase)} />
 		<script type="application/ld+json" set:html={JSON.stringify({
@@ -82,13 +122,16 @@ const schemaBase = {
 			"url": "https://comffordableairsolutions.com/",
 			"logo": "https://comffordableairsolutions.com/images/logo.png",
 			"sameAs": [
-				businessData.socials.facebook
+				businessData.socials.facebook,
+				businessData.socials.instagram,
+				businessData.socials.yelp,
+				businessData.socials.nextdoor
 			],
 			"contactPoint": {
 				"@type": "ContactPoint",
 				"telephone": businessData.phone,
 				"contactType": "customer service",
-				"areaServed": "US",
+				"areaServed": "US-FL",
 				"availableLanguage": ["English"]
 			}
 		})} />
